@@ -98,8 +98,8 @@ html {
   --hover-color: #111;
   --visited-color: #5200ff;
   --project-title-color: #5200ff;
-  --project-sidebar-background-color: orangered;
-  --project-sidebar-text-color: white;
+  --project-sidebar-background-color: transparent;
+  --project-sidebar-text-color: black;
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #5200ff;
@@ -586,10 +586,10 @@ a:active {
   width: 100%;
   padding: 1rem;
   /* Delete the following if you do not want a gradient background on the project page */
-  background-image: linear-gradient(-225deg,
+  /* background-image: linear-gradient(-225deg,
       var(--linear-gradient-color-1) 0%,
       var(--linear-gradient-color-2) 50%,
-      var(--linear-gradient-color-3) 100%);
+      var(--linear-gradient-color-3) 100%); */
 }
 
 
