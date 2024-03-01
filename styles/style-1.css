@@ -15,21 +15,6 @@
 
 
 /*
-
-Imported stylesheets. Remove the ones you do not want to use.
-
-██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
-██ ████  ████ ██   ██ ██    ██ ██   ██    ██        ██      ██      ██      
-██ ██ ████ ██ ██████  ██    ██ ██████     ██        ██      ███████ ███████ 
-██ ██  ██  ██ ██      ██    ██ ██   ██    ██        ██           ██      ██ 
-██ ██      ██ ██       ██████  ██   ██    ██         ██████ ███████ ███████ 
-
-*/
-
-@import url('make-something-fly.css');
-@import url('animated-gradient.css');
-@import url('text-stroke.css');
-@import url('stroke-shadow.css');
 @import url('scroll-to-top.css');
 /*
 
@@ -74,7 +59,8 @@ html {
   --body-typeface: "Red Hat Display", sans-serif;
   --heading-typeface: 'Imbue', serif;
   --project-title-typeface: 'Anybody', sans-serif;
-/*  --background-color: #110EAD;*/
+  --background-color: #110EAD;
+  --background-color-about: #205433;
   --background-color-footer: #110EAD;    
   --alt-background-color: #110EAD;
   --background-color-holding-page:#110EAD;
@@ -99,6 +85,9 @@ html {
   --project-sidebar-text-color: black;
   --heart-color: darkred;
   --text-selection-background-color: #5200ff;
+  --linear-gradient-color-1: #ff057c;
+  --linear-gradient-color-2: #8d0b93;
+  --linear-gradient-color-3: #321575;
   --stroke-shadow-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -355,13 +344,6 @@ a:active {
   padding: 1rem;
 }
 
-.hero-footer-about {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  color: #445420;
-}
 
 
 
@@ -442,7 +424,7 @@ a:active {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  background: #205433;
+  background: var(--background-color-about);
   padding: 1rem;
   flex: 1;
   
