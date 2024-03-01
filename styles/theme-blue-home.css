@@ -147,6 +147,7 @@ h2 {
 h3 {
   font-size: 3.157rem;
   font-family: var(--project-title-typeface);
+  margin-top: 1rem;
   margin-bottom: .4rem;
   line-height: 1;
   color: var(--h3-color);
@@ -367,6 +368,68 @@ a:active {
 
 */
 
+.work-wrapper {
+  flex: 1;
+}
+
+/* Padding around work grid and project page */
+.portfolio,
+.project-wrapper {
+  padding: 1rem;
+}
+
+/* Defining the work page grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1rem;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+.work-page-grid-item {
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* Required to contain overlay size */
+}
+
+.project-cover-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 3rem;
+  margin-bottom: 2vh;
+}
+
+
+
+/*
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.75s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  background-color: var(--overlay-color);
+  transition: opacity .3s, visibility .3s;
+}
+
+.work-page-grid-item:hover .overlay {
+  visibility: visible;
+  opacity: .8;
+}
+*/
+
 
 /* 
 
@@ -421,10 +484,10 @@ a:active {
 .global-footer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  min-height: 100vh;
+  grid-gap: 1rem;
+  min-height: 30vh;
   background: var(--background-color-footer);
-  padding: 1rem;
+  padding: rem;
 }
 
 .footer-item-1 {
@@ -513,7 +576,7 @@ a:active {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 1rem;
   }
 
@@ -584,7 +647,7 @@ a:active {
   /* Padding around work grid and project page */
   .portfolio,
   .project-wrapper {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   /* Project Page Flex Direction on Large Devices */

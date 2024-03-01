@@ -368,6 +368,57 @@ a:active {
 
 */
 
+.work-wrapper {
+  flex: 1;
+}
+
+/* Padding around work grid and project page */
+.portfolio,
+.project-wrapper {
+  padding: .25rem;
+}
+
+/* Defining the work page grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+.work-page-grid-item {
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* Required to contain overlay size */
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.75s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  background-color: var(--overlay-color);
+  transition: opacity .3s, visibility .3s;
+}
+
+.work-page-grid-item:hover .overlay {
+  visibility: visible;
+  opacity: .8;
+}
+
+
 
 /* 
 
@@ -462,6 +513,66 @@ a:active {
 ███████║   ██║      ██║   ███████╗███████╗    ╚██████╔╝╚██████╔╝██║██████╔╝███████╗
 ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝     ╚═════╝  ╚═════╝ ╚═╝╚═════╝ ╚══════╝
  */
+ .project-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Sidebar */
+.project-aside {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--project-sidebar-text-color);
+  background: var(--project-sidebar-background-color);
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.arrow {
+  padding: 0;
+}
+
+.project-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  min-height: 50vh;
+  /* min-height should be deleted if you want to remove space between project images on project pages */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-section {
+  width: 100%;
+}
+
+.project-text {
+  width: 100%;
+  font-size: 3.25rem;
+  padding: 3rem;
+}
+
+/* Main Project Image Area */
+
+.project-details {
+  width: 100%;
+  padding: 1rem;
+}
 
 .style-guide-page-wrapper {
   padding: 3rem;

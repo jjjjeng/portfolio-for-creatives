@@ -670,7 +670,7 @@ a:active {
   place-items: center;
 }
 
-.error-page-wrapper {}
+.error-page-wrapper {  padding: 3rem;}
 
 .error-page-inner-container {
   text-align: center;
@@ -694,7 +694,7 @@ a:active {
   place-items: center;
 }
 
-.play-page-wrapper {}
+.play-page-wrapper {  padding: 3rem;}
 
 .play-page-inner-container {
   text-align: center;
@@ -756,8 +756,8 @@ a:active {
   padding: 1rem;
   text-align: center;
 }
-
-.sub-navigation-item {}
+/*
+.sub-navigation-item {}*/
 
 a.sub-navigation-link {
   border: 1px solid var(--accent-color);
