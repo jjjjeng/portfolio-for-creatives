@@ -138,6 +138,10 @@ h1 {
   color: var(--h1-color);
 }
 
+.h1-error-title {
+  text-align: center;
+}
+
 h2 {
   font-size: 4.209rem;
   font-family: var(--heading-typeface);
@@ -313,6 +317,11 @@ a:active {
   justify-content: space-between;
   padding: 1rem;
   align-items: flex-start;
+}
+
+.error-page-title {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
