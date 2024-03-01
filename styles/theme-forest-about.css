@@ -26,11 +26,7 @@ Imported stylesheets. Remove the ones you do not want to use.
 
 */
 
-@import url('make-something-fly.css');
-@import url('animated-gradient.css');
-@import url('text-stroke.css');
-@import url('stroke-shadow.css');
-@import url('scroll-to-top.css');
+
 /*
 
 X-Small devices (portrait phones, less than 576px) 
@@ -74,32 +70,27 @@ html {
   --body-typeface: "Red Hat Display", sans-serif;
   --heading-typeface: 'Imbue', serif;
   --project-title-typeface: 'Anybody', sans-serif;
- /* --background-color: #110EAD;
-  --background-color-footer: #110EAD;    
-  --alt-background-color: #110EAD;
-  --background-color-holding-page:#110EAD;*/
-  --h1-color: #6BCEBF;
-  --h2-color: #6BCEBF;
-  --h3-color: #D5E0EA;
-  --h4-color: #D5E0EA;
-  --h5-color: #D5E0EA;
-  --h6-color: #D5E0EA;
-  --primary-text-color: #D5E0EA;
-  --holding-page-title-color: D5E0EA;
-  --accent-color: #D5E0EA;
-  --overlay-color: #D5E0EA;
-  --overlay-title-color: #717469;
-  --overlay-description-color: #D5E0EA;
-  --hyperlink-color: #D5E0EA;
+  --background-color: #205433;
+  --background-color-footer: #205433;    
+  --alt-background-color: #205433;
+  --background-color-holding-page:#205433;
+  --h1-color: #DBE6F5;
+  --h2-color: #DBE6F5;
+  --h3-color: #DBE6F5;
+  --h4-color: #DBE6F5;
+  --h5-color: #DBE6F5;
+  --h6-color: #DBE6F5;
+  --primary-text-color: #DBE6F5;
+  --holding-page-title-color: #205433;
+  --accent-color: #6BCEBF;
+  --overlay-color: #205433;
+  --overlay-title-color: #205433;
+  --overlay-description-color: #205433;
+  --hyperlink-color: #6BCEBF;
   --hyperlink-alternate-color: #F85A05;
   --hover-color: #6BCEBF;
   --visited-color: #F85A05;
-  --project-title-color: #717469;
-  --project-sidebar-background-color: transparent;
-  --project-sidebar-text-color: black;
-  --heart-color: darkred;
-  --text-selection-background-color: #5200ff;
-  --stroke-shadow-color: rgba(0, 0, 0, 0.4);
+  --text-selection-background-color: #6BCEBF;
 }
 
 body {
@@ -141,40 +132,40 @@ svg {
 */
 
 h1 {
-  font-size: 3rem;
+  font-size: 5.61rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 4.209rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h2-color);
 }
 
 h3 {
-  font-size: 1.325rem;
+  font-size: 3.157rem;
   margin-bottom: 1rem;
   line-height: 1.3;
   color: var(--h3-color);
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 2.369rem;
   margin-bottom: 1rem;
   color: var(--h4-color);
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.777rem;
   margin-bottom: 1rem;
   color: var(--h5-color);
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.333rem;
   margin-bottom: 1rem;
   color: var(--h6-color);
 }
@@ -190,7 +181,7 @@ em {
 }
 
 .fineprint {
-  font-size: .875rem;
+  font-size: .75rem;
 }
 
 .hero-headline {
@@ -267,11 +258,6 @@ a:active {
 }
 
 
-
-.heart {
-  color: var(--heart-color);
-}
-
 .footer-nav-item {
   line-height: 1.3;
 }
@@ -312,6 +298,7 @@ a:active {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
+  color: #205433;
 }
 
 .branding-navigation {
@@ -345,6 +332,7 @@ a:active {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  color: #205433;
 }
 
 .hero-footer-navigation {
@@ -359,7 +347,7 @@ a:active {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  color: #445420;
+  color: #6BCEBF;
 }
 
 
@@ -373,58 +361,6 @@ a:active {
  ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
 
 */
-
-.work-wrapper {
-  flex: 1;
-}
-
-/* Padding around work grid and project page */
-.portfolio,
-.project-wrapper {
-  padding: .25rem;
-}
-
-/* Defining the work page grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
-}
-
-.work-page-grid-item {
-  width: 100%;
-  height: auto;
-  position: relative;
-  /* Required to contain overlay size */
-}
-
-/* Overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.75s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1em;
-  background-color: var(--overlay-color);
-  transition: opacity .3s, visibility .3s;
-}
-
-.work-page-grid-item:hover .overlay {
-  visibility: visible;
-  opacity: .8;
-}
-
-
 
 
 /* 
@@ -512,137 +448,6 @@ a:active {
 }
 
 
-/* Project Page 
-
-██████  ██████   ██████       ██ ███████  ██████ ████████     ██████   █████   ██████  ███████ 
-██   ██ ██   ██ ██    ██      ██ ██      ██         ██        ██   ██ ██   ██ ██       ██      
-██████  ██████  ██    ██      ██ █████   ██         ██        ██████  ███████ ██   ███ █████   
-██      ██   ██ ██    ██ ██   ██ ██      ██         ██        ██      ██   ██ ██    ██ ██      
-██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
-                                                                                               
-*/
-
-.project-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Sidebar */
-.project-aside {
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  color: var(--project-sidebar-text-color);
-  background: var(--project-sidebar-background-color);
-}
-
-.project-navigation {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.arrow {
-  padding: 0;
-}
-
-.project-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.project-image {
-  width: 100%;
-  min-height: 50vh;
-  /* min-height should be deleted if you want to remove space between project images on project pages */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.large-emoji-placeholder {
-  font-size: 12rem; /* This is for making the placeholder emojis large and should be deleted */
-}
-
-.text-section {
-  width: 100%;
-}
-
-.project-text {
-  width: 100%;
-  font-size: 3.25rem;
-  padding: 3rem;
-}
-
-/* Main Project Image Area */
-
-.project-details {
-  width: 100%;
-  padding: 1rem;
-  /* Delete the following if you do not want a gradient background on the project page */
-  /* background-image: linear-gradient(-225deg,
-      var(--linear-gradient-color-1) 0%,
-      var(--linear-gradient-color-2) 50%,
-      var(--linear-gradient-color-3) 100%); */
-}
-
-
-
-
-
-/* 
-
-██   ██  ██████  ██      ██████  ██ ███    ██  ██████  
-██   ██ ██    ██ ██      ██   ██ ██ ████   ██ ██       
-███████ ██    ██ ██      ██   ██ ██ ██ ██  ██ ██   ███ 
-██   ██ ██    ██ ██      ██   ██ ██ ██  ██ ██ ██    ██ 
-██   ██  ██████  ███████ ██████  ██ ██   ████  ██████  
-                                                       
-*/
-
-.holding-page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  place-items: center;
-  text-align: center;
-  width: 100%;
-  min-height: 100vh;
-  /* Delete the following if you do not want a grainy gradient background on the holding page */
-  background:
-    linear-gradient(0deg, rgba(0, 0, 0, 1), var(--background-color-holding-page)),
-    url(/assets/temp/noise.svg);
-  /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
-}
-
-.holding-page-animation {
-  margin-bottom: 1rem;
-}
-
-.holding-page-title {
-  font-size: 1.5rem;
-  color: var(--holding-page-title-color);
-}
-
-.holding-page-footer {
-  display: grid;
-  place-items: center;
-  min-height: 10vh;
-  width: 100%;
-}
-
-.holding-page-copyright {
-  font-size: .8rem;
-  color: var(--holding-page-footer-color);
-  margin-bottom: 0;
-}
-
 /*
 ███████╗████████╗██╗   ██╗██╗     ███████╗     ██████╗ ██╗   ██╗██╗██████╗ ███████╗
 ██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝    ██╔════╝ ██║   ██║██║██╔══██╗██╔════╝
@@ -655,161 +460,6 @@ a:active {
 .style-guide-page-wrapper {
   padding: 3rem;
 }
-
-
-/*
-███████ ██████  ██████   ██████  ██████  
-██      ██   ██ ██   ██ ██    ██ ██   ██ 
-█████   ██████  ██████  ██    ██ ██████  
-██      ██   ██ ██   ██ ██    ██ ██   ██ 
-███████ ██   ██ ██   ██  ██████  ██   ██ 
-*/
-
-.error-page {
-  display: grid;
-  place-items: center;
-}
-
-.error-page-wrapper {}
-
-.error-page-inner-container {
-  text-align: center;
-}
-
-.error-page-title {
-  color: var(--accent-color);
-}
-
-/*
-
-██████  ██       █████  ██    ██ 
-██   ██ ██      ██   ██  ██  ██  
-██████  ██      ███████   ████   
-██      ██      ██   ██    ██    
-██      ███████ ██   ██    ██    
-*/
-
-.play-page {
-  display: grid;
-  place-items: center;
-}
-
-.play-page-wrapper {}
-
-.play-page-inner-container {
-  text-align: center;
-}
-
-.play-page-title {
-  color: var(--accent-color);
-}
-
-
-/*
-███████ ██   ██ ██████  ███████ ██████  ██ ███    ███ ███████ ███    ██ ████████ ███████ 
-██       ██ ██  ██   ██ ██      ██   ██ ██ ████  ████ ██      ████   ██    ██    ██      
-█████     ███   ██████  █████   ██████  ██ ██ ████ ██ █████   ██ ██  ██    ██    ███████ 
-██       ██ ██  ██      ██      ██   ██ ██ ██  ██  ██ ██      ██  ██ ██    ██         ██ 
-███████ ██   ██ ██      ███████ ██   ██ ██ ██      ██ ███████ ██   ████    ██    ███████ 
-*/
-
-
-.experiments-page {
-  display: grid;
-  place-items: center;
-}
-
-.experiments-page-inner-container {
-  text-align: center;
-  min-height: 100vh;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.experiments-page-title {
-  color: var(--accent-color);
-  font-size: 2rem;
-}
-
-.experiment-1-wrapper {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
-  flex: 1;
-}
-
-.experiment-2-wrapper {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-}
-
-.sub-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 1rem;
-  text-align: center;
-}
-
-.sub-navigation-item {}
-
-a.sub-navigation-link {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  padding: 1rem;
-}
-
-a.sub-navigation-link:hover {
-  color: var(--accent-color);
-  padding: 1rem;
-}
-
-/* Let's size the boxes */
-
-.experiment-box {
-  width: 50%;
-  padding: 2rem;
-  display: grid;
-  place-items: center;
-}
-
-.image {
-  width: 40%;
-}
-
-/* Let's hide box 2 */
-
-.experiment-image-2 {
-  display: none;
-}
-
-.experiment-image-single {
-  width: 20rem;
-  padding: 2rem;
-  display: grid;
-  place-items: center;
-}
-
-#heyday-logo-blue {
-  animation: rotation 9s infinite linear;
-}
-
-@-webkit-keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 
 /*
 
